@@ -1,0 +1,28 @@
+services:
+  postgres-compose:
+    restart: always
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: "123456"
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db-data:/var/lib/postgresql/data
+    networks:
+      - postgres-compose-network
+      
+  pgadmin-compose:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "erison.pimentao@bemoldigital.com" # ***** WARNING  *****
+      PGADMIN_DEFAULT_PASSWORD: "bemoldigital@admin" # ***** WARNING  *****
+    ports:
+      - "15432:80"
+    depends_on:
+      - postgres-compose
+    networks:
+      - postgres-compose-network
+
+networks: 
+  postgres-compose-network:
+    driver: bridge
