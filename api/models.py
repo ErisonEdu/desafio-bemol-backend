@@ -8,6 +8,7 @@ class Customer(models.Model):
     cellphone = models.CharField(default='',max_length=11)
     cep = models.CharField(default='', max_length=8)
     street = models.CharField(default='', max_length=100)
+    house_number = models.CharField(default='',max_length=5)
     adress_complement = models.CharField(default='', max_length=100)
     district = models.CharField(default='', max_length=100)
     city = models.CharField(default='', max_length=50)

@@ -13,6 +13,8 @@ class CustomerSerializer(serializers.ModelSerializer):
         'email',
         'cellphone',
         'street',
+        'house_number',
+        'adress_complement',
         'district',
         'city',
         'state',
