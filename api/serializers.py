@@ -14,7 +14,7 @@ class CustomerSerializer(serializers.ModelSerializer):
         'cellphone',
         'street',
         'house_number',
-        'adress_complement',
+        'address_complement',
         'district',
         'city',
         'state',

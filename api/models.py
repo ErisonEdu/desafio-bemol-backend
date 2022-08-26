@@ -9,7 +9,7 @@ class Customer(models.Model):
     cep = models.CharField(default='', max_length=8)
     street = models.CharField(default='', max_length=100)
     house_number = models.CharField(default='',max_length=5)
-    adress_complement = models.CharField(default='', max_length=100)
+    address_complement = models.CharField(default='', max_length=100)
     district = models.CharField(default='', max_length=100)
     city = models.CharField(default='', max_length=50)
     state = models.CharField(default='', max_length=30)
